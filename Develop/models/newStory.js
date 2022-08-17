@@ -15,6 +15,15 @@ NewStory.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    added_by:{
+        type: DataTypes.STRING,
+        references:{
+          model:'user',
+          key:'username'
+        }
+  
+      },
+      
     user_id: {
       type: DataTypes.INTEGER,
       references: {

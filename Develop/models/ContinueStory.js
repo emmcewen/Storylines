@@ -12,7 +12,8 @@ ContinueStory.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    
+
+   
     newstory_id: {
       type: DataTypes.INTEGER,
       references: {
