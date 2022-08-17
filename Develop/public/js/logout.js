@@ -1,0 +1,1 @@
+/* logout async and await functions */
