@@ -4,32 +4,32 @@ const { continueStory } = require('../../models');
 
 // route for publishing new story
 
-router.post('/', async(req, res) = {
+router.post('/', async (req, res) => {
     try {
         const newStory = await Story.create({
             ...req.body,
             user_id: req.session.user_id,
         });
         res.status(200).json(newStory);
-    } catch(err) {
+    } catch (err) {
         res.status(400).json(err)
     }
 
 });
 
 // add comment/ continue the story to add on to the story
-router.update("/continue", aysnc(req, res) = {
+router.post('/', aysnc(req, res) => {
     try {
         const continueStory = await Story.create({
             ...req.body,
             user_id: req.session.user_id,
         });
         res.status(200).json(continueStory);
-    } catch(err) {
+    } catch (err) {
         res.status(400).json(err)
     }
 
-})
+});
 
 // delete story with story id
 
