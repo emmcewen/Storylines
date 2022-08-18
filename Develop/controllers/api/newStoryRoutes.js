@@ -1,30 +1,16 @@
 const router = require('express').Router();
-const { Story } = require('../../models');
-const { continueStory } = require('../../models');
+const { NewStory } = require('../../models');
+const { ContinueStory } = require('../../models');
 
 // route for publishing new story
 
 router.post('/', async (req, res) => {
     try {
-        const newStory = await Story.create({
+        const newStory = await NewStory.create({
             ...req.body,
             user_id: req.session.user_id,
         });
         res.status(200).json(newStory);
-    } catch (err) {
-        res.status(400).json(err)
-    }
-
-});
-
-// add comment/ continue the story to add on to the story
-router.post('/', aysnc(req, res) => {
-    try {
-        const continueStory = await Story.create({
-            ...req.body,
-            user_id: req.session.user_id,
-        });
-        res.status(200).json(continueStory);
     } catch (err) {
         res.status(400).json(err)
     }
@@ -47,7 +33,7 @@ router.delete('/:id', aysnc(req, res) => {
             return;
         }
         res.status(200).json(storyData);
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err);
     }
 });
