@@ -1,7 +1,7 @@
 const router = require('express').Router()
-const User = require('//models//')
+const User = require('../../models')
 
-// the sign in information
+// the sign in information route
 
 router.post('/', async (req, res) => {
     try {

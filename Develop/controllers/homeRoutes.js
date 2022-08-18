@@ -1,2 +1,3 @@
 const router = require('express').Router()
-const { Story, User} - require ('../models');
+const { Story, User} = require ('../models');
+
