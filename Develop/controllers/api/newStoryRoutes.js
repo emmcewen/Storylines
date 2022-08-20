@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { NewStory } = require('../../models');
-const { ContinueStory } = require('../../models');
 
 // route for publishing new story
 
