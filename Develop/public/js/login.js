@@ -1,12 +1,26 @@
-//need html & API endpoint paths
 
-/*create const loginFormHandler = async (event)=> {
+const loginFormHandler = async function(event) {
     event.preventDefault();
-}
-
-Login form
-
-Send a POST request to API endpoint
-
-Login successful, redirect to home/profile page
-if/else if not successful*/
+  
+    const usernameEl = document.querySelector('#username-input-login');
+    const passwordEl = document.querySelector('#password-input-login');
+  
+    const response = await fetch('/api/user/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        username: usernameEl.value,
+        password: passwordEl.value,
+      }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+  
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert('Failed to login');
+    }
+  };
+  
+  document
+    .querySelector('.login-form')
+    .addEventListener('submit', loginFormHandler);
