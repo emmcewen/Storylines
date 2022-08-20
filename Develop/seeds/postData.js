@@ -10,7 +10,7 @@ const postdata =
   },
   {
     "postTitle": "",
-    "postContent": "This is the greenest field",
+    "postContent": "",
     "userId": 2
   },
   {
