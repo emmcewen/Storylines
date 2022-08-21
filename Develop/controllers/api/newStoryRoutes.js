@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
 
 // delete story with story id
 
-router.delete('/:id', (req, res) => {
+router.delete('/:NewStoryId', (req, res) => {
     try {
         const storyData = Story.destroy({
             where: {
