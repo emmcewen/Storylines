@@ -3,7 +3,7 @@ const { ContinueStory } = require('../../models');
 
 // add comment/ continue the story to add on to the story
 
-router.post('/:Id/comments', aysnc(req, res) => {
+router.post('/:Id/comments', (req, res) => {
     // try {
     //     const ContinueStory = await ContinueStory.create({
     //         ...req.body,
@@ -13,11 +13,12 @@ router.post('/:Id/comments', aysnc(req, res) => {
     // } catch (err) {
     //     res.status(400).json(err)
     // }
-    const comment =new Comment (req.body);
+    const comment = new Comment (req.body);
     comment
     .save()
+    .then(()=> ContinueStory.findById(req.params.StoryId))
     // Redirect to the root
-    .then(()=> res.direct('/'))
+    .then(()=> res.redirect('/'))
     .catch((err)=>{
         console.log(err);
     });

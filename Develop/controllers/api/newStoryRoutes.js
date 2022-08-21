@@ -1,3 +1,4 @@
+// <<<<<<< HEAD
 const router = require('express').Router();
 const { NewStory } = require('../../models');
 
@@ -18,9 +19,9 @@ router.post('/', async (req, res) => {
 
 // delete story with story id
 
-router.delete('/:id', aysnc(req, res) => {
+router.delete('/:id', (req, res) => {
     try {
-        const storyData = await Story.destroy({
+        const storyData = Story.destroy({
             where: {
                 id: req.parasm.id,
                 user_id: req.session.user_id,
@@ -38,3 +39,5 @@ router.delete('/:id', aysnc(req, res) => {
 });
 
 module.exports = router
+=======
+>>>>>>> 8a48440cbaa68ef58e4634964e6807bdad676bc4
