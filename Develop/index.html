@@ -1,4 +1,6 @@
-<!-- <!DOCTYPE html>
+<!--Sign Up/Login Page-->
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,11 +22,11 @@
     <link rel="stylesheet" href="./public/css/style.css" />
     <title>Storylines</title>
   </head>
-  <body> -->
-    <!-- <header>
+  <body> 
+     <header>
       <h1 class="title is-1">Storylines</h1>
-    </header> -->
-    <!-- <main>
+    </header>
+    <main>
       <h4 class="title is-4">Sign up to join our collaborative Storyline!</h4>
       <div class="field">
         <h3 class="title is-3">Sign Up</h3>
@@ -44,14 +46,143 @@
           <br/>
           <br/>
           <p>Already part of the story?</p>
-          <br />
           <div class="field">
             <p class="control">
               <button class="button is-success">Login</button>
+              <br/>
+              <br/>
             </p>
           </div>
         </div>
       </div>
     </main>
   </body>
-</html> -->
+</html>
+<br>
+<br>
+
+<!-- comment box -->
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <form action="/posts/{{post._id}}/comments" method="post">
+      <textarea class='form-control' name="content" placeholder="Comment"></textarea>
+      <p>Character limit 1500</p>
+      <div class="text-right">
+        <button type="submit" class="btn btn-primary">Continue Story</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- posted comments with username and date posted -->
+<div class="comments">
+  {{#each this}}
+  <section class="comment">
+    <div class="meta">
+      {{user.username}} on {{format_date dateCreated}}
+    </div>
+    <div class="text">
+      {{commentContent}}
+    </div>
+  </section>
+  {{/each}}
+</div>
+<div class="comments">
+  {{#each this}}
+  <div>
+    <p class="card-body2">
+    {{commentContent}} - {{user.username}} {{format_date dateCreated}}
+    </p>
+  </div>
+  {{/each}}
+</div>
+<div class="comments">
+  {{#each this}}
+  <div class="card">
+    <div class="card-header  flex-row justify-space-between">
+      <h2>
+        <a href="/post/{{id}}">
+          <div class="col-8">{{postTitle}}</div>
+        </a>
+      </h2>
+      <div class="col-3">posted by {{user.username}} on {{format_date dateCreated}}
+      </div>
+    </div>
+    <p class="card-body">
+    {{commentContent}}
+    </p>
+  </div>
+  {{/each}}
+</div>
+
+<!-- nesting comments:  -->
+
+<article class="media">
+  <figure class="media-left">
+   <span for="img" aria-label="writinghand">✍🏽</span>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong>{{user.username}} {{format_date}}</strong>
+        <br>
+        {{commentContent}}
+        <br>
+        <small><a>Add to story</a></small>
+      </p>
+    </div>
+
+    <article class="media">
+      <figure class="media-left">
+        <!-- <p class="image is-48x48">
+          <img src="https://bulma.io/images/placeholders/96x96.png">
+        </p> -->
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong>{{user.username}} {{format_date}}</strong>
+            <br>
+            {{commentContent}}
+            <br>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="media">
+      <figure class="media-left">
+        <!-- <p class="image is-48x48">
+          <img src="https://bulma.io/images/placeholders/96x96.png">
+        </p> -->
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong>{{user.username}} {{format_date}}</strong>
+            <br>
+            {{commentContent}}
+            <br>
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</article>
+
+<article class="media">
+  <figure class="media-left">
+  </figure>
+  <div class="media-content">
+    <div class="field">
+      <p class="control">
+        <textarea class="textarea" placeholder="Add a comment..."></textarea>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control">
+        <button class="button">Submit storyline</button>
+      </p>
+    </div>
+  </div>
+</article>
