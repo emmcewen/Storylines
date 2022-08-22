@@ -29,3 +29,5 @@ ContinueStory.init(
     modelName: 'continuestory',
   }
 );
+
+module.exports = ContinueStory;
