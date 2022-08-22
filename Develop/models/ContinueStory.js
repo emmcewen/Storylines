@@ -1,9 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const NewStory = require('./newStory');
 
-class NewStory extends Model {}
+class ContinueStory extends Model {}
 
-NewStory.init(
+ContinueStory.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,15 +12,10 @@ NewStory.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     content:{
-        type: DataTypes.STRING,
-      allowNull: false,
-    },
-      
+      type: DataTypes.STRING,
+    allowNull: false,
+  },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -28,17 +24,26 @@ NewStory.init(
       },
     },
     date_created: {
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: DataTypes.NOW,
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+
+   
+    newstory_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'newstory',
+        key: 'id',
       },
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'newstory',
+    modelName: 'continuestory',
   }
 );
 
-module.exports = NewStory;
+module.exports = ContinueStory;
