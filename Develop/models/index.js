@@ -17,4 +17,10 @@ ContinueStory.belongsTo(NewStory, {
   foreignKey: 'newstory_id',
 });
 
+ContinueStory.belongsTo(User,{
+    foreignKey: 'user_id'
+})
+User.hasMany(ContinueStory,{
+    foreignKey:'user_id'
+});
 module.exports = { User, NewStory, ContinueStory };
