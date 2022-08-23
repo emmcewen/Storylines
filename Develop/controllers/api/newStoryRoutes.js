@@ -5,15 +5,16 @@ const { NewStory } = require('../../models');
 // route for publishing new story
 
 router.post('/', async (req, res) => {
-    try {
+    // try {
         const newStory = await NewStory.create({
             ...req.body,
             user_id: req.session.user_id,
         });
         res.status(200).json(newStory);
-    } catch (err) {
-        res.status(400).json(err)
-    }
+        
+    // } catch (err) {
+    //     res.status(400).json(err)
+    // }
 
 });
 

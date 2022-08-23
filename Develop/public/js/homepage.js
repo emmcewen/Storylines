@@ -2,20 +2,25 @@
 const newFormHandler = async function(event) {
     event.preventDefault();
   
-    const postTitle = document.querySelector('input[name="post-title"]').value;
-    const postContent = document.querySelector('textarea[name="post-body"]').value;
+    const title = document.querySelector('input[name="post-title"]').value;
+    const content = document.querySelector('textarea[name="post-body"]').value;
   
-    console.log(postTitle);
-    console.log(postContent);
+    console.log(title);
+    console.log(content);
   
-    await fetch(`/api/post`, {
+    var response = await fetch(`/api/newStory`, {
       method: 'POST',
       body: JSON.stringify({
-        postTitle,
-        postContent,
+        title,
+        content,
       }),
       headers: { 'Content-Type': 'application/json' },
     });
+    if (response.ok) {
+      document.location.replace('/newstory');
+    } else {
+      alert('Failed to update your post');
+    }
   
   };
   
@@ -23,24 +28,24 @@ const newFormHandler = async function(event) {
     .querySelector('#new-post-form')
     .addEventListener('submit', newFormHandler);
 
-const postId = document.querySelector('input[name="post-id"]').value;
+// const postId = document.querySelector('input[name="post-id"]').value;
 console.log("testing");
-console.log(postId);
+// console.log(postId);
 
 const editFormHandler = async (event) => {
   event.preventDefault();
 
-  const postTitle = document.querySelector('input[name="post-title"]').value;
-  const postContent = document.querySelector('textarea[name="post-body"]').value;
+  const title = document.querySelector('input[name="post-title"]').value;
+  const content = document.querySelector('textarea[name="post-body"]').value;
 
-  console.log(postTitle);
-  console.log(postContent);
+  console.log(title);
+  console.log(content);
 
   const response = await fetch(`/api/post/${postId}`, {
     method: 'PUT',
     body: JSON.stringify({
-      postTitle,
-      postContent,
+      title,
+      content,
     }),
     headers: {
       'Content-Type': 'application/json'
@@ -49,11 +54,11 @@ const editFormHandler = async (event) => {
 
   console.log(response);
   if (response.ok) {
-    document.location.replace('/dashboard');
+    document.location.replace('/newstory');
   } else {
     alert('Failed to update your post');
   }
-  document.location.replace('/dashboard');
+  document.location.replace('/newstory');
 };
 
 const deleteClickHandler = async () => {
@@ -61,11 +66,5 @@ const deleteClickHandler = async () => {
     method: 'DELETE'
   });
 
-  document.location.replace('/dashboard');
+  document.location.replace('/newstory');
 };
-document
-  .querySelector('#edit-post-form')
-  .addEventListener('submit', editFormHandler);
-document
-  .querySelector('#delete-btn')
-  .addEventListener('click', deleteClickHandler);
