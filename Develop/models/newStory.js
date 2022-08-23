@@ -15,6 +15,10 @@ NewStory.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    content:{
+        type: DataTypes.STRING,
+      allowNull: false,
+    },
       
     user_id: {
       type: DataTypes.INTEGER,
@@ -23,6 +27,11 @@ NewStory.init(
         key: 'id',
       },
     },
+    date_created: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: DataTypes.NOW,
+      },
   },
   {
     sequelize,

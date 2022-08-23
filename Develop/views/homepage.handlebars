@@ -4,8 +4,8 @@ HTML --}}
   <div class="col-sm-6 col-sm-offset-3">
     <a href="{{post.url}}" class="lead">{{post.title}}</a>
     {{post.date}}
-    <form action="/posts/{{post._id}}/comments" method="post">
-      <textarea class='form-control' name="content" placeholder="Comment"></textarea>
+    <form action="/posts/{{post.id}}/comments" method="post">
+      <textarea class='form-control' name="post-body" placeholder="Comment"></textarea>
       <p>Character limit 1500</p>
       <div class="text-right">
         <button type="submit" class="btn btn-primary">Continue Story</button>
