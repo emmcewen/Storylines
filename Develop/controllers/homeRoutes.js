@@ -1,20 +1,24 @@
 const router = require('express').Router();
 const { NewStory, User, ContinueStory} = require ('../models');
-const withAuth = reqire ('../utils/auth');
+const withAuth = require ('../utils/auth');
 
-router.get('/', async (req,res)=>{
+router.get('/', async (req, res)=>{
+    res.render('login')
+}) 
+
+router.get('/newstory', async (req,res)=>{
     try {
-        const storyData = await Story.findAll({
+        const storyData = await NewStory.findAll({
             include: [
                 {
                     model:User,
-                    attributes: ['name'],
+                    attributes: ['username'],
                 },
             ],
         });
 
         const stories = storyData.map((story)=> story.get({plain:true}));
-
+        console.log(stories)
         res.render('homepage', {
             stories,
             logged_in:req.session.logged_in
