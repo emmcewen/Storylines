@@ -1,5 +1,5 @@
 const router = require ('express').Router();
-const { ContinueStory, ContinueStory } = require('../../models');
+const { ContinueStory } = require('../../models');
 
 // add comment/ continue the story to add on to the story
 
@@ -13,7 +13,7 @@ router.post('/stories/:storyId/continuestory', (req, res) => {
     // } catch (err) {
     //     res.status(400).json(err)
     // }
-    const continueStory = new Comment (req.body);
+    const continueStory = new ContinueStory (req.body);
     continueStory
     .save()
     .then(()=> ContinueStory.findById(req.params.StoryId))
