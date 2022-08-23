@@ -61,60 +61,6 @@
 <br>
 <br>
 
-<!-- comment box -->
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-    <form action="/posts/{{post._id}}/comments" method="post">
-      <textarea class='form-control' name="content" placeholder="Comment"></textarea>
-      <p>Character limit 1500</p>
-      <div class="text-right">
-        <button type="submit" class="btn btn-primary">Continue Story</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- posted comments with username and date posted -->
-<div class="comments">
-  {{#each this}}
-  <section class="comment">
-    <div class="meta">
-      {{user.username}} on {{format_date dateCreated}}
-    </div>
-    <div class="text">
-      {{commentContent}}
-    </div>
-  </section>
-  {{/each}}
-</div>
-<div class="comments">
-  {{#each this}}
-  <div>
-    <p class="card-body2">
-    {{commentContent}} - {{user.username}} {{format_date dateCreated}}
-    </p>
-  </div>
-  {{/each}}
-</div>
-<div class="comments">
-  {{#each this}}
-  <div class="card">
-    <div class="card-header  flex-row justify-space-between">
-      <h2>
-        <a href="/post/{{id}}">
-          <div class="col-8">{{postTitle}}</div>
-        </a>
-      </h2>
-      <div class="col-3">posted by {{user.username}} on {{format_date dateCreated}}
-      </div>
-    </div>
-    <p class="card-body">
-    {{commentContent}}
-    </p>
-  </div>
-  {{/each}}
-</div>
-
 <!-- nesting comments:  -->
 
 <article class="media">
@@ -178,11 +124,56 @@
       <p class="control">
         <textarea class="textarea" placeholder="Add a comment..."></textarea>
       </p>
+      <p>Character limit 1500</p>
     </div>
     <div class="field">
       <p class="control">
         <button class="button">Submit storyline</button>
       </p>
     </div>
+  </div>
+</article>
+
+
+<br>
+<br>
+<br>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Begin by adding a title and telling your story. Once you are done, hit the 'submit storyline' button to share it with other collaborators who can add to your storyline.</h3>
+  <article class="media">
+  <figure class="media-left"></figure>
+      </p>
+    </div>
+  </div>
+</article>
+
+<!-- textarea for story title -->
+
+<div class="field is-grouped">
+  <p class="control is-expanded">
+    <input class="input" type="text" placeholder="Story Title">
+  </p>
+</div>
+
+<!-- comment box for initial story for users to add to -->
+
+<article class="media">
+  <figure class="media-left">
+  </figure>
+  <div class="media-content">
+    <div class="field">
+      <p class="control">
+        <textarea class="textarea" placeholder="Add to the storyline..."></textarea>
+      </p>
+    </div>
+    <nav class="level">
+      <div class="level-left">
+        <div class="level-item">
+         <a class="button is-info">Submit storyline</a> <!-- use javascript to pull values from story title and add to the storyline textareas with one submit button -->
+        </div>
+      </div>
+    </nav>
   </div>
 </article>
