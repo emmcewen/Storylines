@@ -1,6 +1,6 @@
-const User = require('./User');
-const NewStory = require('./NewStory');
-const ContinueStory = require('./ContinueStory');
+const User = require('./user');
+const NewStory = require('./newStory');
+const ContinueStory = require('./continueStory');
 
 User.hasMany(NewStory,{
     foreignKey:'user_id'

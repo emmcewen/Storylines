@@ -6,6 +6,11 @@ router.get('/', async (req, res)=>{
     res.render('login')
 }) 
 
+router.get('/signup', async (req,res) =>{
+    res.render('signup')
+})
+
+
 router.get('/newstory', async (req,res)=>{
     try {
         const storyData = await NewStory.findAll({

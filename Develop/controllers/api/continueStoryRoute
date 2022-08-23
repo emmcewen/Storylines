@@ -1,25 +1,11 @@
 const router = require ('express').Router();
-<<<<<<< HEAD
 const { ContinueStory } = require('../../models');
-=======
-const { ContinueStory} = require('../../models');
->>>>>>> 11fb10d640a8c12277711a518e751c2b5e4dbe12
+
 
 // add comment/ continue the story to add on to the story
 
 router.post('/stories/:storyId/continuestory', (req, res) => {
-<<<<<<< HEAD
-    // try {
-    //     const ContinueStory = await ContinueStory.create({
-    //         ...req.body,
-    //         user_id: req.session.user_id,
-    //     });
-    //     res.status(200).json(continueStory);
-    // } catch (err) {
-    //     res.status(400).json(err)
-    // }
-=======
->>>>>>> 11fb10d640a8c12277711a518e751c2b5e4dbe12
+
     const continueStory = new ContinueStory (req.body);
     continueStory
     .save()
