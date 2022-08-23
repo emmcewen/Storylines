@@ -18,13 +18,29 @@ Provide a short description explaining the what, why, and how of your project. U
 
 ## Installation
 Step 1: Install all necessary libraries. 
-    To install you will need to open a new terminal and type in npm i **insert name of libraries here** and press enter. Those libraries include: brcrypt, connect-session-sequelize, dotenv, express, express-handlebars, express-session, mysql2 and sequelize.
+<br>
+-To install you will need to open a new terminal and type in npm i **insert name of libraries here** and press enter. <br>
+-Those libraries include: brcrypt, connect-session-sequelize, dotenv, express, express-handlebars, express-session, mysql2 and sequelize.
+<br>
+<br>
 Step 2: Open a new terminal and sign in to mysql.
+<br>
+<br>
 Step 3: In the terminal, you will need to run the schema file by typing source db/schema.sql; and press enter.
+<br>
+<br>
 Step 4: Go into a new terminal and type npm run seeds.
-Step 5: npm start
+<br>
+<br>
+Step 5: Type npm start
+<br>
+<br>
 Step 6: Go into your web browser and type in the url: localhost:3001
-Step 7: Sign up for Storylines by typing in your username and password.
+<br>
+<br>
+Step 7: Sign up for Storylines by creating a unique username and password.
+<br>
+<br>
 Step 8: Explore your creativity by writing your own stories and sharing them with other collaborators!
 
 ## Usage
@@ -39,11 +55,29 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-Emily (project manager): utils, config, server.js, seeds, public js and presentation.
-Iman: models
-Adrian: routes
+Emily: Project manager, utils, config, server.js, seeds, public js and presentation.
+<br>
+GitHub: emmcewen
+<br>
+<br>
+Iman: Models
+<br>
+GitHub: y2kRULEZ
+<br>
+<br>
+Adrian: Routes
+<br>
+GitHub: afirmalan
+<br>
+<br>
 Marilyn: CSS
-Mariah: Handlebars and readme.
+<br>
+GitHub: 
+<br>
+<br>
+Mariah: Handlebars/HTML and ReadMe.
+<br>
+GitHub: Mariah217
 
 
 ## License
@@ -73,21 +107,7 @@ SOFTWARE.
 
 ## Badges
 
-![badmath](https://img.shields.io/static/v1?label=JavaScript&message=63%&color=blue)
-![badmath](https://img.shields.io/static/v1?label=CSS&message=<MESSAGE>&color=ff69b4)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+![badmath](https://img.shields.io/static/v1?label=JavaScript&message=63%&color=blue)<br>
+![badmath](https://img.shields.io/static/v1?label=CSS&message=<MESSAGE>&color=yellow)<br>
+![badmath](https://img.shields.io/static/v1?label=HTML&message=19%&color=red)<br>
+![badmath](https://img.shields.io/static/v1?label=Handlebars&message=13%&color=orange)<br>
