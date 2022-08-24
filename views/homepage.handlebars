@@ -1,0 +1,59 @@
+{{!-- This is where the ongoing story comments will appear
+HTML --}}
+
+
+
+
+
+<section class="section is-paddingless-horizontal">
+  <div class="container grid-xl">
+    <div class="columns is-mobile">
+      <div class="column is-full-width">
+        <div class="notification has-background-black-bis">
+          {{post.date}}
+
+          <form id="new-post-form">
+            <div class="field center">
+              <div class="control">
+                <input type="text" name="post-title" placeholder="Add Title Here">
+              </div>
+            </div>
+
+            <textarea class="textarea is-success is-large" rows="6" class='form-control' name="post-body"
+              placeholder="Once upon a time..."></textarea>
+
+            <p class='has-text-white-bis center'>Character limit 1500</p>
+            <br>
+
+            <div class="buttons center">
+              <div class="text-right">
+                <button type="submit" class="button is-success is-light ">Continue Story</button>
+              </div>
+            </div>
+          </form>
+
+          <br>
+
+          <div class="control">
+            {{#each stories}}
+            <field class="textarea has-fixed-size" rows="1">
+              {{title}} by {{user.username}} on {{format_date date_created}}
+            </field>
+
+            <textarea class="textarea has-fixed-size is-success is-light" rows="3">
+            {{content}}
+            </textarea>
+
+            {{/each}}
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="js/homepage.js"></script> <a href="{{post.url}}" class="lead">{{post.title}}</a>
