@@ -2,30 +2,34 @@
 HTML --}}
 
 
-<div class="row grid-xl">
-      {{post.date}}
+<div class="form has-background-black-bis grid-xl">
+  {{post.date}}
 
-    <form id="new-post-form"> 
-
-      <input type="text" name="post-title">
-
-      <textarea class='form-control' name="post-body" placeholder="Comment"></textarea>
-
-      <p>Character limit 1500</p> 
-      
-      <div class="text-right">
-        <button type="submit" class="button is-success is-light">Continue Story</button>
+  <form id="new-post-form">
+    <div class="field center">
+      <div class="control">
+        <input type="text" name="post-title" placeholder="Add Title Here">
       </div>
+    </div>
 
-    </form>
+    <textarea class='form-control' name="post-body" placeholder="Once upon a time..."></textarea>
 
-    {{#each stories}} 
-    <h3>{{title}} by {{user.username}} on {{format_date date_created}}</h3>
-    <p>{{content}}</p>
-    {{/each}}
+    <p class= 'has-text-white-bis center' >Character limit 1500</p>
+
+
+    <div class="text-right">
+      <button type="submit" class="button is-success is-light ">Continue Story</button>
+    </div>
+
+  </form>
+
+  {{#each stories}}
+  <h3>{{title}} by {{user.username}} on {{format_date date_created}}</h3>
+  <p>{{content}}</p>
+  {{/each}}
 
 </div>
 
 
 
-<script src="js/homepage.js"></script>    <a href="{{post.url}}" class="lead">{{post.title}}</a>
+<script src="js/homepage.js"></script> <a href="{{post.url}}" class="lead">{{post.title}}</a>
