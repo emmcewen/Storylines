@@ -1,22 +1,31 @@
 {{!-- This is where the ongoing story comments will appear
 HTML --}}
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-    <a href="{{post.url}}" class="lead">{{post.title}}</a>
-    {{post.date}}
+
+
+<div class="row grid-xl">
+      {{post.date}}
+
     <form id="new-post-form"> 
+
       <input type="text" name="post-title">
+
       <textarea class='form-control' name="post-body" placeholder="Comment"></textarea>
+
       <p>Character limit 1500</p> 
+      
       <div class="text-right">
-        <button type="submit" class="btn btn-primary">Continue Story</button>
+        <button type="submit" class="button is-success is-light">Continue Story</button>
       </div>
+
     </form>
+
     {{#each stories}} 
     <h3>{{title}} by {{user.username}} on {{format_date date_created}}</h3>
     <p>{{content}}</p>
     {{/each}}
-  </div>
+
 </div>
 
-<script src="js/homepage.js"></script>
+
+
+<script src="js/homepage.js"></script>    <a href="{{post.url}}" class="lead">{{post.title}}</a>
