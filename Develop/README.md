@@ -2,12 +2,7 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+Storylines is a website that allows you to explore your writing creativity. Once you sign up for an account, you can create new stories to share with other collaborators. With this application, you can submit a few paragraphs of a story that you want to start and other collaborators can continue to add onto your story. In the end, the story can and will take many twists and turns that are completely unexpected. You can create as many stories as you would like, as well as contribute to other collaborators stories as well. Sign up and let your imagination run wild!
 
 ## Table of Contents (Optional)
 
@@ -72,10 +67,10 @@ GitHub: afirmalan
 <br>
 Marilyn: CSS
 <br>
-GitHub: 
+GitHub: 0magical
 <br>
 <br>
-Mariah: Handlebars/HTML and ReadMe.
+Mariah: Handlebars/HTML, assisted with some CSS and ReadMe.
 <br>
 GitHub: Mariah217
 
@@ -85,7 +80,7 @@ MIT License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) [2022] [Emily McEwen, Iman Pace, Adrian Firmalan, Marilyn **need last name**, Mariah Johnston ]
+Copyright (c) [2022] [Emily McEwen, Iman Pace, Adrian Firmalan, Marilyn Ventura, Mariah Johnston ]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
