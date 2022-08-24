@@ -1,16 +1,7 @@
 {{!-- This is where the ongoing story comments will appear
 HTML --}}
 
-{{!-- <nav class="navbar is-transparent is-spaced" role="navigation" aria-label="main navigation">
-  <div class="navbar-menu is-active">
-    <div class="navbar-end">
-      <a class="navbar-item">
 
-    </div>
-    </a>
-  </div>
-  </div>
-</nav> --}}
 
 
 
@@ -28,23 +19,34 @@ HTML --}}
               </div>
             </div>
 
-            <textarea class='form-control' name="post-body" placeholder="Once upon a time..."></textarea>
+            <textarea class="textarea is-success is-large" rows="6" class='form-control' name="post-body"
+              placeholder="Once upon a time..."></textarea>
 
             <p class='has-text-white-bis center'>Character limit 1500</p>
+            <br>
 
             <div class="buttons center">
               <div class="text-right">
                 <button type="submit" class="button is-success is-light ">Continue Story</button>
               </div>
             </div>
-
-
           </form>
 
-          {{#each stories}}
-          <h3>{{title}} by {{user.username}} on {{format_date date_created}}</h3>
-          <p>{{content}}</p>
-          {{/each}}
+          <br>
+
+          <div class="control">
+            {{#each stories}}
+            <field class="textarea has-fixed-size" rows="1">
+              {{title}} by {{user.username}} on {{format_date date_created}}
+            </field>
+
+            <textarea class="textarea has-fixed-size is-success is-light" rows="3">
+            {{content}}
+            </textarea>
+
+            {{/each}}
+
+          </div>
 
         </div>
       </div>
