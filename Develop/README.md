@@ -40,6 +40,8 @@ Step 8: Explore your creativity by writing your own stories and sharing them wit
 
 ## Usage
 
+ <a href="https://project2-em.herokuapp.com/">Click for live link</a>
+
 Provide instructions and examples for use. Include screenshots as needed.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
@@ -104,5 +106,4 @@ SOFTWARE.
 
 ![badmath](https://img.shields.io/static/v1?label=JavaScript&message=63%&color=blue)<br>
 ![badmath](https://img.shields.io/static/v1?label=CSS&message=<MESSAGE>&color=yellow)<br>
-![badmath](https://img.shields.io/static/v1?label=HTML&message=19%&color=red)<br>
 ![badmath](https://img.shields.io/static/v1?label=Handlebars&message=13%&color=orange)<br>
