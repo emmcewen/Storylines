@@ -1,4 +1,6 @@
-
+body{
+	background-image: url(/Develop/public/images/pencil.jpg);
+}
 .grid{
     display: grid;
     grid-template-columns: [xl-start]1fr  24px [md-start]minmax(0,624px)24px [md-end] 1fr [xl-end];
