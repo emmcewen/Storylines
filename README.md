@@ -97,10 +97,12 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+
 SOFTWARE.
 
 ## Badges
 
-![badmath](https://img.shields.io/static/v1?label=JavaScript&message=63%&color=blue)<br>
-![badmath](https://img.shields.io/static/v1?label=CSS&message=<MESSAGE>&color=yellow)<br>
-![badmath](https://img.shields.io/static/v1?label=Handlebars&message=13%&color=orange)<br>
+![badmath](https://img.shields.io/static/v1?label=JavaScript&message=72%&color=blue)<br>
+![badmath](https://img.shields.io/static/v1?label=Handlebars&message=23%&color=orange)<br>
+![badmath](https://img.shields.io/static/v1?label=CSS&message=4%&color=yellow)<br>
+
