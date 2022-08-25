@@ -43,9 +43,9 @@ Step 8: Explore your creativity by writing your own stories and sharing them wit
  <a href="https://project2-em.herokuapp.com/">Click for live link</a>
 
 
-![screenshot1](assets/storylines1.png)
-![screenshot1](assets/storylines2.png)
-![screenshot1](assets/storylines3.png)
+![screenshot1](Assets/storylines1.png)
+![screenshot1](Assets/storylines2.png)
+![screenshot1](Assets/storylines3.png)
 
 ## Credits
 
