@@ -43,12 +43,13 @@ Step 8: Explore your creativity by writing your own stories and sharing them wit
  <a href="https://project2-em.herokuapp.com/">Click for live link</a>
 
 
-![screenshot1](assets/images/screenshot.png)
-
+![screenshot1](assets/storylines1.png)
+![screenshot1](assets/storylines2.png)
+![screenshot1](assets/storylines3.png)
 
 ## Credits
 
-Emily: Project manager, utils, config, server.js, seeds, public js and presentation.
+Emily: Project manager, public js and presentation.
 <br>
 GitHub: emmcewen
 <br>
@@ -96,10 +97,12 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+
 SOFTWARE.
 
 ## Badges
 
-![badmath](https://img.shields.io/static/v1?label=JavaScript&message=63%&color=blue)<br>
-![badmath](https://img.shields.io/static/v1?label=CSS&message=<MESSAGE>&color=yellow)<br>
-![badmath](https://img.shields.io/static/v1?label=Handlebars&message=13%&color=orange)<br>
+![badmath](https://img.shields.io/static/v1?label=JavaScript&message=72%&color=blue)<br>
+![badmath](https://img.shields.io/static/v1?label=Handlebars&message=23%&color=orange)<br>
+![badmath](https://img.shields.io/static/v1?label=CSS&message=4%&color=yellow)<br>
+
